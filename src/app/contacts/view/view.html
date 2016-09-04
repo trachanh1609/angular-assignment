@@ -1,0 +1,105 @@
+<h2>{{ $ctrl.contact.firstName }} {{ $ctrl.contact.surName }}
+  <div class="btn-group pull-right">
+    <button class="btn btn-primary" ng-click="$ctrl.back()">Back to list</button>
+    <button class="btn btn-default" ng-click="$ctrl.edit()">Edit contact</button>
+  </div>
+</h2>
+
+<div class="well">
+  <ng-form name="contactForm">
+    <div class="row form-horizontal">
+      <div class="col-sm-6">
+
+        <div class="form-group">
+          <label class="control-label col-sm-4">Is active:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">
+              <span ng-show="$ctrl.contact.isActive" class="label label-success">YES</span>
+              <span ng-hide="$ctrl.contact.isActive" class="label label-danger">NO</span>
+            </p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">First name:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ $ctrl.contact.firstName || '-' }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">Sur name:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ $ctrl.contact.surName || '-' }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">Gender:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ $ctrl.contact.gender || '-' }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">Company:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ $ctrl.contact.company || '-' }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">Email:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ $ctrl.contact.email || '-' }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">Phone:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ $ctrl.contact.phone || '-' }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">Tags:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">
+              <span class="label label-primary" style="margin: 0 2px" ng-repeat="tag in $ctrl.contact.tags track by $index">{{ tag }}</span>
+              <span ng-hide="$ctrl.contact.tags.length">-</span>
+            </p>
+          </div>
+        </div>
+
+      </div>
+      <div class="col-sm-6">
+
+        <div class="form-group">
+          <label class="control-label col-sm-4">Street:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ $ctrl.contact.street || '-' }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">City:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ $ctrl.contact.city || '-' }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">State:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ $ctrl.contact.state || '-' }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">Zip code:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static">{{ $ctrl.contact.zip || '-' }}</p>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="control-label col-sm-4">About:</label>
+          <div class="col-sm-8">
+            <p class="form-control-static" style="white-space: pre-wrap">{{ $ctrl.contact.about || '-' }}</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </ng-form>
+</div>
