@@ -24,6 +24,8 @@
       exporterMenuCsv: true,
       enableGridMenu: true,
       enableFiltering: true,
+      enableHorizontalScrollbar: 2,
+      enableVerticalScrollbar: 2,
       columnDefs: [
         { name: 'isActive', displayName: 'Active', width: 70, cellClass: 'text-center', cellTemplate:
           '<div class="ui-grid-cell-contents"><span class="label" ng-class="{\'label-success\':COL_FIELD, \'label-danger\':!COL_FIELD}">{{ COL_FIELD ? "YES" : "NO" }}</span></div>',
@@ -39,7 +41,7 @@
         { name: 'company', displayName: 'Company', width: 150 },
         { name: 'email', displayName: 'Email', width: 225 },
         { name: 'phone', displayName: 'Phone', width: 150 },
-        { name: 'tags', displayName: 'Tags', cellTemplate:
+        { name: 'tags', displayName: 'Tags', minWidth: 150, cellTemplate:
           '<div class="ui-grid-cell-contents text-muted">{{ (COL_FIELD || []).join(", ") }}</div>'
         }
       ]
