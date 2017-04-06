@@ -4,7 +4,7 @@ Boilerplate project & app for angular assignments
 
 ## Install
 
-Install NodeJS: https://nodejs.org
+Install NodeJS: https://nodejs.org (tested with 6.9.1)
 
 Clone this repository
 
@@ -27,7 +27,7 @@ bower install
 
 ## Run & build project
 
-Run locally, watch changes, rebuild & update browser:
+Run locally, watch for source changes, rebuild & update browser:
 
 ```
 gulp serve
