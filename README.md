@@ -25,7 +25,7 @@ npm install
 bower install
 ```
 
-### Run & build project
+## Run & build project
 
 Run locally, watch changes, rebuild & update browser:
 
