@@ -41,4 +41,8 @@ Generate distribution files into /dist:
 gulp
 ```
 
+## Related resources
 
+- UI-router: https://github.com/angular-ui/ui-router/tree/legacy
+- AngularJS component: https://docs.angularjs.org/guide/component
+- Gulp project generated with: https://github.com/Swiip/generator-gulp-angular
