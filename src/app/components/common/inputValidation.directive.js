@@ -45,7 +45,7 @@
         replace: true,
         scope: true,
         template: '<span class="glyphicon form-control-feedback" ng-class="getValidationFeedback()"></span>',
-        link: function (scope, el, attrs) {
+        link: function (scope) {
 
           scope.getValidationFeedback = function () {
             if (scope.validationState == 'has-success') {

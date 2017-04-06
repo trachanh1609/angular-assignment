@@ -15,12 +15,12 @@
       $log.debug('API: ' + method + ' ' + url);
     };
 
-    $httpBackend.whenGET(/\/contacts$/).respond(function(method, url, data) {
+    $httpBackend.whenGET(/\/contacts$/).respond(function(method, url) {
       log(method, url);
       return [200, contactsData, {}];
     });
 
-    $httpBackend.whenGET(/\/contacts\/[0-9]+$/).respond(function(method, url, data) {
+    $httpBackend.whenGET(/\/contacts\/[0-9]+$/).respond(function(method, url) {
       log(method, url);
       var index = url.match(new RegExp('[0-9]+$'))[0] - 1;
       return [200, contactsData[index], {}];

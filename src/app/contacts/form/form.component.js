@@ -26,7 +26,7 @@
         });
       }
       else {
-        contactsApi.update({ id: ctrl.contact.id }, ctrl.contact, function (response) {
+        contactsApi.update({ id: ctrl.contact.id }, ctrl.contact, function () {
           $state.go('app.contacts.view', { id: ctrl.contact.id });
         });
       }

@@ -6,11 +6,12 @@
     .controller('AppController', AppController);
 
   /** @ngInject */
-  function AppController($rootScope, $log) {
+  function AppController($scope, $rootScope, $log) {
 
-    $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
+    var onStateChangeError = $rootScope.$on('$stateChangeError', function (event, toState, toParams, fromState, fromParams, error) {
       $log.error('State change error: ' + angular.toJson({ error: error, to: toState, from: fromState }));
     });
+    $scope.$on('$destroy', onStateChangeError);
 
   }
 })();
