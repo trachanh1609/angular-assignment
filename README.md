@@ -4,9 +4,11 @@ Boilerplate project & app for angular assignments
 
 ## Install
 
-Install NodeJS: https://nodejs.org (tested with 6.9.1)
+Install NodeJS: https://nodejs.org (tested with 6.9.1 and 6.10.2 LTS)
 
-Clone this repository
+For Windows official Git is recommended: https://git-scm.com/download/win
+
+Then clone or fork this repository.
 
 ### Install global tools `gulp` and `bower`
 ```
