@@ -1,0 +1,21 @@
+<div class="row">
+  <h3 class="text-center">CARD LIST</h3>
+
+</div>
+<br>
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-sm-offset-3">
+    <div class="input-group">
+      <span class="glyphicon glyphicon-search input-group-addon" style="top:0px;"></span>
+      <input type="text" class="form-control" ng-model="searchQuery"  aria-describedby="sizing-addon1">
+    </div>
+  </div>
+</div>
+<br>
+<hr>
+<br>
+<div class="row">
+<div ng-repeat="contact in $ctrl.contacts | filter:{isActive:true} | filter: searchQuery" class="col-md-4 col-sm-6 col-xs-12">
+    <card contact="contact"></card>
+</div>
+</div>
